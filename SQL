@@ -1,0 +1,104 @@
+SELECT column1, column2, ...
+FROM table_name;
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+= Equal
+> Greater than
+< Less than
+>= Greater than or equal
+<= Less than or equal
+<> or != Not equal
+BETWEEN Between a certain range
+LIKE Search for a pattern
+'a%' finds any values that start with "a"
+'%a' finds any values that end with "a"
+'%or%' finds any values that have "or" in any position
+'_r%' find any values that have "r" in the second position
+'a_%' finds any values that start with "a" and are at least 2 characters in length
+'a%o' finds any values that start with "a" and ends with "o"
+
+
+
+
+
+
+
+
+
+IN To specify multiple possible values for a column
+
+SQL AND, OR and NOT Operators, IS NULL, IS NOT NULL
+COUNT(), AVG() and SUM() Functions
+
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC | DESC;
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+DELETE FROM table_name WHERE condition;
+
+-- SQL Server / MS Access Syntax
+SELECT TOP number | percent column_name(s)
+FROM table_name
+WHERE condition;
+
+-- MySQL Syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+
+
+https://viblo.asia/p/myisam-innodb-in-mysql-924lJOkm5PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
