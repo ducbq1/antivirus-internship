@@ -1,0 +1,29 @@
+const sect = document.querySelector('section');
+const para = document.createElement('p');
+para.textContent = 'ABC';
+sect.appendChild(para);
+const text = document.createTextNode('CDE');
+sect.removeChild(para);
+para.appendChild(text);
+
+para.style.color
+para.style.backgroundColor
+para.style.padding
+para.style.width
+para.style.textAlign
+
+para.setAttribute('class', 'highlight');
+
+window.onresize = function() {
+  winWidth = window.innerWidth;
+  winHeight = window.innerHeight;
+  div.style.width = winWidth + 'px';
+  div.style.height = winHeight + 'px';
+}
+
+
+Async callbacks: are functions that are specified as arguments / parameter when calling a function which will start executing code in the background. When the background code finishes running, it calls the callback funtion to let you know the work is done, or to let you know that something of interest has happened. Using callbacks is slightly old-fashioned now, but you'll still see them in use in a number of older-but-still-commonly-used APIs.
+Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the fetch() API, which is basically like a modern, more efficient version of XMLHttpRequest.
+Promises are a comparatively new feature of JavaScript language that allow you to defer further actions until after a previous action has completed, or respond to its failure. This is useful for setting up a sequence of async operations to work correctly.
+Async / Await makes your code look synchronous, and in a way it makes it behave more synchronously. The await keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked.
+AJAX: This led to the creation of technologies that allow web pages to request small chunks of data (such as HTML, XML, JSON, or plain text) and display them only when needed, helping to solve the problem described above. This is achieved by using APIs like XMLHttpRequest or -- more recently -- the Fetch API. These technologies allow web pages to directly handle making HTTP requests for specific resources available on a server and formatting the resulting data as needed before it is displayed.
