@@ -1,0 +1,230 @@
+SELECT column1, column2, ...
+FROM table_name;
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+= Equal
+> Greater than
+< Less than
+>= Greater than or equal
+<= Less than or equal
+<> or != Not equal
+BETWEEN Between a certain range
+LIKE Search for a pattern
+'a%' finds any values that start with "a"
+'%a' finds any values that end with "a"
+'%or%' finds any values that have "or" in any position
+'_r%' find any values that have "r" in the second position
+'a_%' finds any values that start with "a" and are at least 2 characters in length
+'a%o' finds any values that start with "a" and ends with "o"
+
+% represents zero or more characters
+_ represents a single character
+[] represents any single character within the brackets
+^ represents any character not in the brackets
+- represents a range of characters
+
+
+
+
+
+
+
+
+
+
+IN To specify multiple possible values for a column
+
+SQL AND, OR and NOT, IN, ANY, ALL Operators, IS NULL, IS NOT NULL
+COUNT(), AVG() and SUM() Functions
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC | DESC;
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+DELETE FROM table_name WHERE condition;
+
+-- SQL Server / MS Access Syntax
+SELECT TOP number | percent column_name(s)
+FROM table_name
+WHERE condition;
+
+-- MySQL Syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+
+
+
+A Join clause is used to combine rows from two or more tables, based on a related column between them.
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+
+Self Join: 
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+
+
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY conlumn_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+SELECT column1, column2, ...
+INTO newtable [IN externaldb] // IN 'Backup.mdb'
+FROM oldtable
+WHERE condition;
+
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+
+SELECT OrderID, Quantity,
+CASE WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+WHEN Quantity = 30 THEN 'The quantity is 30'
+ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
+
+
+
+
+CREATE DATABASE databasename;
+
+DROP DATABASE databasename;
+
+BACKUP DATABASE databasename
+TO DISK = 'filepath';
+WITH DIFFERENTIAL;
+
+CREATE TABLE table_name (
+	column1 datatype,
+	column2 datatype,
+	column3 datatype,
+	...
+);
+
+
+CREATE TABLE new_table_name AS
+	SELECT column1, column2, ...
+	FROM existing_table_name
+	WHERE ...;
+
+
+
+DROP TABLE table_name;
+
+TRUNCATE TABLE table_name;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://viblo.asia/p/myisam-innodb-in-mysql-924lJOkm5PM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

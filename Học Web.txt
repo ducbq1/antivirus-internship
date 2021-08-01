@@ -1,0 +1,237 @@
+const sect = document.querySelector('section');
+const para = document.createElement('p');
+para.textContent = 'ABC';
+sect.appendChild(para);
+const text = document.createTextNode('CDE');
+sect.removeChild(para);
+para.appendChild(text);
+
+para.style.color
+para.style.backgroundColor
+para.style.padding
+para.style.width
+para.style.textAlign
+
+para.setAttribute('class', 'highlight');
+
+window.onresize = function() {
+  winWidth = window.innerWidth;
+  winHeight = window.innerHeight;
+  div.style.width = winWidth + 'px';
+  div.style.height = winHeight + 'px';
+}
+
+
+Async callbacks: are functions that are specified as arguments / parameter when calling a function which will start executing code in the background. When the background code finishes running, it calls the callback funtion to let you know the work is done, or to let you know that something of interest has happened. Using callbacks is slightly old-fashioned now, but you'll still see them in use in a number of older-but-still-commonly-used APIs.
+Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the fetch() API, which is basically like a modern, more efficient version of XMLHttpRequest.
+Promises are a comparatively new feature of JavaScript language that allow you to defer further actions until after a previous action has completed, or respond to its failure. This is useful for setting up a sequence of async operations to work correctly.
+Async / Await makes your code look synchronous, and in a way it makes it behave more synchronously. The await keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked.
+AJAX: This led to the creation of technologies that allow web pages to request small chunks of data (such as HTML, XML, JSON, or plain text) and display them only when needed, helping to solve the problem described above. This is achieved by using APIs like XMLHttpRequest or -- more recently -- the Fetch API. These technologies allow web pages to directly handle making HTTP requests for specific resources available on a server and formatting the resulting data as needed before it is displayed.
+Restful API: Instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
+
+
+
+
+<input type="text" disabled="disabled">
+<a href="" title="" target="_blank"></a>
+
+<: &lt;
+>: &gt;
+": &quot;
+': &apos;
+&: &amp;
+
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+<meta property="og:title" content="Mozilla Developer Network">
+
+<link rel="short icon" size="" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="my-css-file.css">
+<html lang="en-US"></html>
+
+Lists unordered <ul><li></li></ul>
+Lists ordered <ol><li></li></ol>
+Lists description <dl><dt></dt><dd></dd></dl>
+
+Emphasis <em></em>
+Strong importance <strong></strong>
+Bold: <b></b>
+Italics: <i></i>
+Underline: <u></u>
+Representing computer code: <code>, <pre>, <var>, <kbd>, <samp>
+The Performatted Text element: <pre></pre>
+Abbreviations: <p>We use <abbr title="Hypertext Markup Language">HTML</abbr>
+Address: <address></address>
+
+Supperscript and subscript: <sup> and <sup>
+
+
+<p><a href="https://firefox.com/">Download Firefox</a></p>
+<a href="https://download.mozilla.org/?product=firefox=latest-ssl&os=win64&lang=en-US" download=firefox-lastest-64bit-installer.exe">Download Latest Firefox for Windows (64-bit) (English, US)</a>
+
+<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+  Send mail with cc, bcc, subject and body
+</a>
+
+<blockquote cite="https://developer.mozilla.org/"></blockquote>
+<q cite="https://developer.mozilla.org/"></q>
+<time datetime="2016-01-20">20 January 2016</time>
+
+header: <header>
+navigation bar: <nav>
+main content: <main>, <article>, <section>, <div>, <span>
+sidebar: <aside>
+footer: <footer>
+breaks: <br>
+horizontal: <hr>
+
+<img src="images/dinosaur.jpg" alt="The head and torso of a dinosaur skeleton" width height title>
+
+<figure>
+	<img src="images/dinosaur.jpg"
+		 alt="The..."
+		 width="" height="" ???title="">
+	<figcaption>A T-Rex...</figcaption>
+</figure>
+
+p {
+	background-image: url("image/dinosaur.jpg");
+}
+
+<video src="rabit320.webm" controls>
+	<p>Your browser doesn't support HTML5 video. Here is a <a href="rabit320.webm">link to the video</a> instead.</p>
+</video>
+
+<video controls width="" height=""
+	   autoplay loop muted preload="auto"
+	   poster="poster.png">
+	<source src="" type="video/mp4">
+	<source src="" type="video/webm">
+</video>
+
+<audio controls>
+	<source src="viper.mp3" type="audio/mp3">
+	<source src="viper.ogg" type="audio/ogg">
+</audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+width:
+border:
+color:
+font-size:
+text-align:
+font-family:
+line-height:
+letter-spacing:
+word-spacing:
+
+
+margin:
+padding:
+border:
+text-shadow:
+background-color:
+display:
+
+/* centering the image */
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+writing-mode
+outline
+inline-block
+
+
+p: <p>
+#my-id: id="my-id"
+.my-class: class="my-class"
+img[src]: <img src="myimage.png">
+[role="main"]
+a:hover: <a></a>
+
+
+Normal flow
+The display property
+Flexbox
+Grid
+Floats
+Positioning
+Table layout
+Multiple-column layout
+
+
+
+flexbox
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+
+grid
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+// grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 100px 100px;
+grid-gap: 10px;
+gap: 10px;
+// fr unit to flexibly size grid rows and columns
+
+grid-column: 1 / 3;
+grid-row: 1;
+
+grid-template-areas:
+	"header header"
+	"sidebar content"
+	"footer footer";
+grid-template-columns: 1fr 3fr;
+// grid-area: sidebar;
+
+float
+float: left;
+float: right.. none.. inherit;
+clear: left; /* Clearing floats */
+
+
+Static positioning;
+Relative positioning;
+Absolute positioning;
+Fixed positioning;
+Sticky positioning;
+
+column-count: 3;
+column-gap: 20px;
+column-rule: 4px dotted rgb(79, 185, 227);
+column-width: 250px;
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
