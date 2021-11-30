@@ -20,6 +20,7 @@ git branch -m <oldname> <newname>
 git branch -m <newname>
 git push origin -u <newname>
 git push origin --delete <oldname>
+git rm -r --cached .
 
 
 git checkout -track <remote/branch> / HEAD
